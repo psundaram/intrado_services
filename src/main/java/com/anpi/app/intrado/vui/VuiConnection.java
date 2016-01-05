@@ -26,7 +26,7 @@ public class VuiConnection {
     
     public VuiConnection() throws IOException{
         Properties prop = new Properties();
-        prop.load(new FileInputStream("C:/Users/sarulsekar/Desktop/Intrado/transient_intrado.properties"));
+        prop.load(new FileInputStream("/apps/intrado/transient_intrado.properties"));
         VUI_URL_NAME = prop.getProperty("vui_url_name");
         KEY_STORE_VALUE = prop.getProperty("key_store_value");
         KEY_STORE_PASSWORD_VALUE = prop.getProperty("key_store_password");
