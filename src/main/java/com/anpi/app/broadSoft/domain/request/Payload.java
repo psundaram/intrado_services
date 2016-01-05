@@ -1,4 +1,4 @@
-package com.anpi.app.broadSoft.domain.response.request;
+package com.anpi.app.broadSoft.domain.request;
 
 import javax.xml.bind.annotation.XmlElement;
 

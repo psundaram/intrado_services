@@ -11,14 +11,14 @@ import javax.xml.bind.Marshaller;
 
 import org.apache.commons.beanutils.BeanUtils;
 
+import com.anpi.app.broadSoft.domain.request.CLS;
+import com.anpi.app.broadSoft.domain.request.HDR;
+import com.anpi.app.broadSoft.domain.request.Payload;
+import com.anpi.app.broadSoft.domain.request.ReqObject;
+import com.anpi.app.broadSoft.domain.request.TRL;
+import com.anpi.app.broadSoft.domain.request.TYS;
+import com.anpi.app.broadSoft.domain.request.VuiBean;
 import com.anpi.app.broadSoft.domain.response.RequestObject;
-import com.anpi.app.broadSoft.domain.response.request.CLS;
-import com.anpi.app.broadSoft.domain.response.request.HDR;
-import com.anpi.app.broadSoft.domain.response.request.Payload;
-import com.anpi.app.broadSoft.domain.response.request.ReqObject;
-import com.anpi.app.broadSoft.domain.response.request.TRL;
-import com.anpi.app.broadSoft.domain.response.request.TYS;
-import com.anpi.app.broadSoft.domain.response.request.VuiBean;
 import com.anpi.app.intrado.vui.VuiConnection;
 
 public class IntradoService {

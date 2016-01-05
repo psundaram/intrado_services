@@ -1,8 +1,8 @@
-package com.anpi.app.broadSoft.domain.response.request;
+package com.anpi.app.broadSoft.domain.request;
 
 import javax.xml.bind.annotation.XmlElement;
 
-public class CLS
+public class TYS
 {
     private String typ;
 
@@ -15,9 +15,9 @@ public class CLS
 		this.typ = typ;
 	}
 
-	public CLS(String typ) {
+	public TYS(String typ) {
 		super();
 		this.typ = typ;
 	}
+    
 }
-	
