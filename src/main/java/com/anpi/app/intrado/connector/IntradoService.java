@@ -69,6 +69,8 @@ public class IntradoService {
 	public String doInsertOrDel(RequestObject req, String action) throws IllegalAccessException, InvocationTargetException, JAXBException, IOException {
 
 		VuiBean vuiBean = new VuiBean();
+		
+		System.out.println("Action :" + action);
 
 		BeanUtils.copyProperties(vuiBean, req);
 		if (action.equals("insert"))

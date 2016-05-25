@@ -12,7 +12,7 @@
                     <div>
                         <h2>Delete Data</h2>
                         <p>This transaction is used to delete records in the databases. The system processes transactions for U.S. service order records and Canadian service order records.</p>
-                        <form action="/intrado">
+                        <form action="/intrado/process">
                             <input type="hidden" name="action" value="del">
                             <table width="80%">
                                 <tr><td>External Key</td><td> : <input type="text" name="ExternalKey" value="9876543210"> </td></tr>

@@ -29,14 +29,14 @@ public class Main {
 		port(4569);
 		staticFileLocation("/public");
 
-		get("/", new Route() {
+		get("/intrado", new Route() {
 			public Object handle(Request request, Response response) {
 				response.redirect("index.jsp");
 				return "";
 			}
 		});
 
-		get("/intrado", (request, response) -> {
+		get("/intrado/process", (request, response) -> {
 			logger.info("Intrado --> Enter " + request.body());
 			
 			SystemResponse responseObject =  processIntrado(request,response);
@@ -46,10 +46,10 @@ public class Main {
 			return new ModelAndView(responseObject.getAttributeMap(), responseObject.getRedirectPage());
 		}, new FreeMarkerEngine());
 
-		get("/query", (request, response) -> {
+		get("/intrado/query", (request, response) -> {
 			logger.info("Query request -->" + request.body());
 
-			String resString = new QueryDataManager().queryDetails(request.queryParams("cpn"), request.queryParams("stExternalKey"));
+			String resString = new QueryDataManager().queryDetails(request.queryParams("cpn"), request.queryParams("externalKey"));
 			response.type("application/xml");
 			
 			logger.info("Query response  -->" + resString);
@@ -57,7 +57,7 @@ public class Main {
 			return resString;
 		});
 
-		post("/add", (request, response) -> {
+		post("/intrado/add", (request, response) -> {
 			logger.info("Insert request -->" + request.body());
 
 			String resString = new QueryDataManager().doInsertOrDeleteProcessing("insert",request.body());
@@ -68,7 +68,7 @@ public class Main {
 			return resString;
 		});
 
-		post("/del", (request, response) -> {
+		post("/intrado/del", (request, response) -> {
 			logger.info("Delete request -->" + request.body());
 
 			String resString = new QueryDataManager().doInsertOrDeleteProcessing("delete", request.body());
@@ -79,7 +79,7 @@ public class Main {
 			return resString;
 		});
 
-		post("/los", (request, response) -> {
+		post("/intrado/los", (request, response) -> {
 			logger.info("Level of Service request -->" + request.body());
 
 			String resString = new QueryDataManager().doLosProcessing(request.body());
@@ -96,7 +96,7 @@ public class Main {
 		SystemResponse responseObject = new SystemResponse();
 		Map<String, Object> attributes = new HashMap<>();
 		
-		String vuiURLName = "http://localhost:4569";
+		String vuiURLName = "http://localhost:4569/intrado";
 		String stAction = request.queryParams("action");
 		
 		logger.info("Intrado Action: " + stAction);

@@ -12,7 +12,7 @@
                     <div>
                         <h2>Query Data</h2>
                         <p>This transaction is used to request the E9-1-1 data that matches the specified Calling Party Number (CPN). The system processes transactions for U.S. service order records and Canadian service order records</p>
-                        <form action="/intrado">
+                        <form action="/intrado/process">
 
                             <input type="hidden" name="action" value="query">
                             <table width="80%">

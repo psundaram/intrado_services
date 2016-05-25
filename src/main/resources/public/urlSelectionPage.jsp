@@ -10,7 +10,7 @@
                 <div class="body" style="width: 100%">
                     <div>
                         <h2>Change Target Server - Intrado</h2>
-                        <form action="intrado">
+                        <form action="intrado/process">
                             <input type="hidden" name="action" value="url_update">
                            <p><b><u>Current Target Server</u> : </b>${updated_url}</p>
 	                      <table width="80%"><tr><td> Select the Environment </td><td>:<select name="URL">

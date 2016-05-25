@@ -13,7 +13,7 @@
                     <div>
                         <h2>Level Of Service(LOS)</h2>
                         <p>Retrieves the available Level of Service for a given address.</p>
-                        <form action="/intrado">
+                        <form action="/intrado/process">
                             <input type="hidden" name="action" value="los">
                             <table width="80%">
                                 <tr><td>House Number (HNO)</td><td> : <input type="text" name="HNO" value="7460"> </td></tr>

@@ -11,7 +11,7 @@
             </script>
     </head>
     <body onload="javascript:submitPage();">
-        <form action="/intrado">
+        <form action="/intrado/process">
             <input type="hidden" name="action" value="url_init">
         </form>
     </body>

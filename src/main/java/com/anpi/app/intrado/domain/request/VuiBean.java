@@ -222,7 +222,8 @@ public class VuiBean {
 		TAR = tAR;
 	}
 
-	@XmlTransient
+//	@XmlTransient
+	@XmlElement(name="ExternalKey")
 	public String getExternalKey() {
 		return ExternalKey;
 	}
@@ -231,7 +232,8 @@ public class VuiBean {
 		ExternalKey = externalKey;
 	}
 
-	@XmlTransient
+//	@XmlTransient
+	@XmlElement(name="ExternalKeyType")
 	public String getExternalKeyType() {
 		return ExternalKeyType;
 	}
