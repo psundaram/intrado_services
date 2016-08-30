@@ -11,6 +11,7 @@ import javax.xml.bind.Marshaller;
 
 import org.apache.commons.beanutils.BeanUtils;
 
+import com.anpi.app.intrado.constants.Constants;
 import com.anpi.app.intrado.domain.request.CLS;
 import com.anpi.app.intrado.domain.request.HDR;
 import com.anpi.app.intrado.domain.request.Payload;
@@ -28,7 +29,7 @@ public class IntradoService {
 		
 		reqObject.setPayload(payLoad);
 
-		reqObject.setHdr(new HDR("1", "VUI-101658", "1.1"));
+		reqObject.setHdr(new HDR("1", Constants.ACCOUNT_ID, "1.1"));
 		reqObject.setTrl(new TRL("1"));
 
 		StringWriter sw = new StringWriter();
