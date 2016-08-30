@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Index Page</title>
-        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="../css/style.css" type="text/css">
     </head>
     <body style="width: 100%;">
         <div style="width: 100%;">
